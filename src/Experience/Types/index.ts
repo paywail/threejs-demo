@@ -1,21 +1,28 @@
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader';
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader';
-// 需要加载的资源 
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
+// 需要加载的资源
 export enum ResourceType {
-  TEXTURE = "texture",
-  GLTFMODEL = "gltfModel",
-  CUBETEXTURE = "cubeTexture",
-  FONTTYPE = "fontType",
+  TEXTURE,
+  GLTFMODEL,
+  CUBETEXTURE ,
+  FONTTYPE,
+  GLBMODEL,
 
 }
 export enum ESourceName {
-  EARTHMAP = "earthMap",
-  STONEMAP = "stoneMap",
-  STARMAP = "starMap",
-  FontTypeRegular = "FontTypeRegular",
-  ALLSKILLSMAP = "allSkillsMap",
+  EARTHMAP ,
+  STONEMAP,
+  STARMAP ,
+  FontTypeRegular,
+  ALLSKILLSMAP,
+  LetterBModel,
+  LetterBModelCollision,
+  MewtwoModel,
 }
 export type TResource = {
-  name: string,
+  name: ESourceName,
   type: ResourceType,
   path: string[],
 }
@@ -23,6 +30,8 @@ export type TLoader = {
   cubeTextureLoader: THREE.CubeTextureLoader,
   textureLoader: THREE.TextureLoader,
   fontLoader: FontLoader,
+  gltfLoader: GLTFLoader,
+  // dracoLoader: DRACOLoader,
 }
 
 // 砖的类型

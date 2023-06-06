@@ -35,5 +35,19 @@ export const sources: TResource[] = [
       "assets/allSkills.png",
     ]
   },
+  {
+    name: ESourceName.LetterBModel,
+    type: ResourceType.GLTFMODEL,
+    path: [
+      "Models/letter/letter_scene/scene.gltf",
+    ]
+  },
+  {
+    name: ESourceName.MewtwoModel,
+    type: ResourceType.GLTFMODEL,
+    path: [
+      "Models/pokemon/mewtwo/scene.gltf",
+    ]
+  },
 
 ]
